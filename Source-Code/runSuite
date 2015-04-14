@@ -1,0 +1,45 @@
+#!/bin/bash
+ 
+usage(){
+  echo "Usage: $0 suite-file program" >&2
+}
+ 
+if [ $# -ne 2 ];then
+  usage
+  exit 1
+fi
+ 
+for test in `cat $1`;do
+  if [ ! -e "${test}.in" ];then
+    echo "Missing ${test}.in file" >&2
+    exit 1
+  fi
+  
+  if [ ! -r "${test}.in" ];then
+    echo "Unreadable ${test}.in file" >&2
+    exit 1
+  fi
+  
+  if [ ! -e "${test}.out"  ];then
+    echo "Missing ${test}.out file" >&2
+    exit 1
+  fi
+ 
+  if [ ! -r "${test}.out" ];then
+    echo "Unreadable ${test}.out file" >&2
+    exit 1
+  fi
+  
+  actual=`${2} < ${test}.in`
+  
+  if [ "${actual}" != "`cat ${test}.out`" ];then
+    echo "Test failed: ${test}"
+    echo "Input:"
+    echo "`cat ${test}.in`"
+    echo "Expected:"
+    echo "`cat ${test}.out`"
+    echo "Actual:"
+    echo "${actual}"
+  fi
+  
+  done
