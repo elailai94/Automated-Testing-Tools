@@ -9,4 +9,5 @@ This repository provides two convenient automated testing tools for testing a fo
 ```
 A memory error testing tool
 ### License
-runSuite is licensed under the [MIT license](https://github.com/elailai94/Automated-Testing-Tools/blob/master/LICENSE.md).
+* runSuite and runValgrind is licensed under the [MIT license](https://github.com/elailai94/Automated-Testing-Tools/blob/master/LICENSE.md).
+* runValgrind is a property of @kushpatel.
