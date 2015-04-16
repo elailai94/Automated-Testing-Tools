@@ -12,7 +12,7 @@ This repository provides two convenient automated testing tools for testing a fo
 ./runValgrind [suite-file] [program]
 ```
 
-> **suite-file** is the test suite file and **program** is a compiled C++ program. **suite-file** contains a list of stems, from which the names of files containing the input and expected output of each test are constructed. For example, *./runSuite mySuite.txt ./myProgram* will run myProgram on each test in mySuite.txt.
+> Note: **suite-file** is the test suite file and **program** is a compiled C++ program. **suite-file** contains a list of stems, from which the names of files containing the input and expected output of each test are constructed. For example, *./runSuite mySuite.txt ./myProgram* will run myProgram on each test in mySuite.txt.
 
 ### License
 * runSuite and runValgrind are licensed under the [MIT license](https://github.com/elailai94/Automated-Testing-Tools/blob/master/LICENSE.md).
