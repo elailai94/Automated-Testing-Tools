@@ -1,4 +1,4 @@
-# Automated Testing Tools
+# runTools
 ### About
 This repository provides two convenient automated testing tools for testing a formal test suite against a C++ program. They are written entirely in Bash script. *runSuite* runs a C++ program on each test in the test suite and reports on any tests whose output doesn't match the expected output. *runValgrind* runs a C++ program on each test in the test suite and reports on any tests which causes the program to have a memory error.
 
