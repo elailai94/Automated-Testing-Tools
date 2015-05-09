@@ -1,5 +1,15 @@
 #!/bin/bash
- 
+
+#=================================================================
+# runSuite
+#
+# @author: Elisha Lai
+# @description: Program to run a C++ program on each test in the
+#   test suite and reports on any tests whose output doesn't
+#   match the expected output
+# @version: 1.4 25/09/2014
+#=================================================================
+
 usage(){
   echo "Usage: $0 suite-file program" >&2
 }
